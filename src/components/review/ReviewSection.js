@@ -1,13 +1,13 @@
 import React from "react";
 import ReviewCard from "./ReviewCard";
 
-const ReviewSection = ({mobileDetail}) => {
+const ReviewSection = ({ mobileDetail }) => {
   return (
-    <div className="mt-8 text-center overflow-x-auto">
+    <div className="mt-8 text-center ">
       <h2 className="text-2xl font-semibold mb-4 text-blue-600">
         Customer Reviews
       </h2>
-      <div className="flex justify-center flex-nowrap space-x-4 p-2">
+      <div className="flex justify-center flex-nowrap space-x-4 p-2 overflow-x-auto">
         {mobileDetail.reviews?.length > 0 ? (
           mobileDetail.reviews.map((review) => (
             <div
