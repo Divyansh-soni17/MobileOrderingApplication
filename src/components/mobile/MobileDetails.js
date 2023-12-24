@@ -31,8 +31,16 @@ const MobileDetails = () => {
   };
 
   const addReview = async (newReview) => {
-    const data = await addMobileReview(id, newReview);
-    console.log(data);
+    try {
+      setLoading(true);
+      const data = await addMobileReview(id, newReview);
+      await fetchMobileDetail();
+
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+      console.error("Error adding review:", error);
+    }
   };
 
   return (
